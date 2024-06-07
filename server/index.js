@@ -18,7 +18,6 @@ app.use(cors());
 app.use("/auth", userRouter);
 app.use("/recipes",recipeRouter);
 
-
 mongoose.connect(process.env.MONGODB_URL)
 mongoose.connection.on('connected', () => console.log('connected'));
 

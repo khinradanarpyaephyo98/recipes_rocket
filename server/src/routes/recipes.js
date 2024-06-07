@@ -6,12 +6,6 @@ import { verifyToken } from "./users.js";
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    console.log('GET request to /users');
-    res.send('User list');
-
-  });
-
 
 router.get("/", async (req, res) => {
     try {
