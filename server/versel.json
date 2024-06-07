@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd client && npm istall && vite build",
+  "buildCommand": "npm istall && npm run start",
   "version": 2,
   "builds": [
    
