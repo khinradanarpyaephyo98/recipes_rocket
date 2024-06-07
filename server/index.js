@@ -2,9 +2,10 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import express from "express";
 import cors from "cors";
-const PORT = 9999;
+import dotenv from 'dotenv';
 
 const app= express();
+dotenv.config({path:'.env'})
 
 import {userRouter} from "./src/routes/users.js";
 import { recipeRouter } from "./src/routes/recipes.js";
@@ -19,8 +20,8 @@ app.use("/recipes",recipeRouter);
 
 
 mongoose
-    .connect('mongodb+srv://krpp98:krpp12345@krpp98.wcjwiao.mongodb.net/receipes')
-    
-app.listen(PORT, ()=>{
-    console.log(`App is running at ${PORT}`)
+    .connect(process.env.MONGODB_URL)
+
+app.listen(process.env.PORT, ()=>{
+    console.log(`Server is running at PORT : ${process.env.PORT}`)
 })
