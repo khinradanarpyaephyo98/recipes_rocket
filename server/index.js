@@ -19,7 +19,7 @@ app.use("/auth", userRouter);
 app.use("/recipes",recipeRouter);
 
 mongoose.connect(process.env.MONGODB_URL)
-mongoose.connection.on('connected', () => console.log('connected'));
+mongoose.connection.on('connected', () => console.log('db connected'));
 
 
 
