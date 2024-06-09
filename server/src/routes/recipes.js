@@ -8,12 +8,7 @@ const router = express.Router();
 
 
 router.get("/", async (req, res) => {
-    try {
-      const result = await RecipeModel.find({});
-      res.status(200).json(result);
-    } catch (err) {
-      res.status(500).json(err);
-    }
+    res.json("Hii")
   });
 
 router.get("/home", async (req, res) => {
