@@ -21,6 +21,12 @@ app.use("/recipes",recipeRouter);
 mongoose.connect(process.env.MONGODB_URL)
 mongoose.connection.on('connected', () => console.log('db connected'));
 
+app.listen(3000,()=>
+    {
+        console.log("Running at 3000")
+    }
+)
+
 
 
 
